@@ -1,8 +1,8 @@
 package shapes;
 
 public class SquarePrism extends Prism {
-private double weidth; 
-private double length;
+private double edgeLength; 
+
 
 
 
@@ -10,27 +10,21 @@ private double length;
 	super();
 }
 
-	public SquarePrism(double weidth, double length) {
+	public SquarePrism(double edgeLength) {
 		super();
-		this.weidth = weidth;
-		this.length = length;
+		this.edgeLength = edgeLength;
+		
 	}
 
 
-	public double getWeidth() {
-		return weidth;
+	
+
+	public double getEdgeLength() {
+		return edgeLength;
 	}
 
-	public void setWeidth(double weidth) {
-		this.weidth = weidth;
-	}
-
-	public double getLength() {
-		return length;
-	}
-
-	public void setLength(double length) {
-		this.length = length;
+	public void setEdgeLength(double edgeLength) {
+		this.edgeLength = edgeLength;
 	}
 
 
@@ -39,13 +33,13 @@ private double length;
 		// TODO Auto-generated method stub
 		
 		
-		double volume = this.length * this.weidth * height; 
+		double volume = this.edgeLength * this.edgeLength * height; 
 		return volume;
 	}
 
 	@Override
 	public double calcBaseArea() {
-		double area = this.length * this.weidth;
+		double area = this.edgeLength * this.edgeLength;
 		return area;
 	}
 
