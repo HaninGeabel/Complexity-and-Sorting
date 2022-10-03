@@ -10,8 +10,8 @@ private double edgeLength;
 	super();
 }
 
-	public SquarePrism(double edgeLength) {
-		super();
+	public SquarePrism(double height, double edgeLength) {
+		super(height);
 		this.edgeLength = edgeLength;
 		
 	}

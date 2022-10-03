@@ -1,23 +1,23 @@
 package shapes;
 
 public class Pyramid extends Shape{
-public double radius; 
+public double edgeLength; 
 
 	public Pyramid() {
 	super();
 }
 
-	public Pyramid(double radius) {
-		super();
-		this.radius = radius;
+	public Pyramid(double height, double edgeLength) {
+		super(height);
+		this.edgeLength = edgeLength;
 	}
 
-	public double getRadius() {
-		return radius;
+	public double getEdgeLength() {
+		return edgeLength;
 	}
 
-	public void setRadius(double radius) {
-		this.radius = radius;
+	public void setRadius(double edgeLength) {
+		this.edgeLength = edgeLength;
 	}
 
 //	@Override
