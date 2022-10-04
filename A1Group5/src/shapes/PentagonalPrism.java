@@ -11,8 +11,8 @@ public PentagonalPrism() {
 }
 
 
-	public PentagonalPrism(double edgeLength) {
-	super();
+	public PentagonalPrism(double height , double edgeLength) {
+	super(height);
 	this.edgeLength = edgeLength;
 }
 

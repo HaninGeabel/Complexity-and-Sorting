@@ -1,6 +1,8 @@
 package shapes;
 
 public class Cylinder extends Shape{
+	
+//	private double height;
 	private double radius;
 	
 
@@ -9,9 +11,18 @@ public class Cylinder extends Shape{
 		super();
 	}
 
-	public Cylinder(double radius) {
-		super();
+	public Cylinder(double height, double radius) {
+		super(height);
+		
 		this.radius = radius;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
 	}
 
 	public double getRadius() {

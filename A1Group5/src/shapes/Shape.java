@@ -1,9 +1,11 @@
 package shapes;
 
+import java.util.Comparator;
+
 public abstract class Shape implements Comparable<Shape> {
 	
 	
-	public  double height = 0;
+	public double height ;
 	
 	public Shape() {
 		super();
