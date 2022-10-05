@@ -2,6 +2,14 @@ package algorithms;
 
 /**
  * A util class for sorting a Comparable array using insertion sort algorithm.
+ * 
+ * This algorithm starts at the first element and starts to compare the current
+ * element with the next element. If the first element is not in sort order compared
+ * to the next element, then swap both elements. If a swap happened, then repeat the
+ * last step with the previous element and the current element. This moves the largest
+ * value to the front of the subarray. It repeats these steps until i is the index of the
+ * last element, except the last element.
+ * 
  * @author Debora Kwon
  *
  */
@@ -12,7 +20,7 @@ public class InsertionSort {
 	 * @param arr A collection of Comparables
 	 * @return The same array that was sorted
 	 */
-	public <T extends Comparable<? super T>> T[] insertionSort (T[] arr) {
+	public static <T extends Comparable<? super T>> T[] insertionSort (T[] arr) {
 		
 		// go through each element except the last element
 		for(int i = 0; i < arr.length - 1; i++) {
