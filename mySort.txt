@@ -1,0 +1,70 @@
+< Pancake Sort Description and Complexity Analysis >
+
+This algorithm starts at the last element and finds the minIndex that has
+the min value in the subarray arr[0..minIndex] and then flips each element
+from arr[0..i] to move the smallest value to the end of the subarray.
+It repeats these steps until i is 0, except 0.
+
+
+Pseudocode:
+
+for i = n - 1 to 0
+		Start: 1 assignment, 1 comparison
+		Each iteration: 1 decrement (arithmetic + assignment), 1 comparison
+			there are n - 1 iterations
+	Set minIndex to i
+		1 assignment
+	for j = i - 1 to 0
+			Start: 1 assignment, 1 comparison
+			Each iteration: 1 decrement (arithmetic + assignment), 1 comparison
+				there are n - 1 iterations
+		If arr[j] less than arr[minIndex] then
+				1 comparison
+			set minIndex to j.
+				1 assignment
+	If i is minIndex then continue to the next index. 
+		1 comparison
+
+	for k = 0 to less than minIndex, increment k and decrement minIndex each iteration.
+			Start: 1 assignment, 1 comparison
+			Each iteration: 1 increment, 1 decrement (arithmetic + assignment), 1 comparison
+				there are n / 2 iterations
+		Set tempValue to arr[minIndex]
+			1 assignment
+		Set arr[minIndex] to arr[k]
+			1 assignment
+		Set arr[k] to tempValue
+			1 assignment
+	
+	for z = 0, lastIndex = i, z to less than lastIndex, increment z, decrement lastIndex
+			Start: 2 assignments, 1 comparison
+			Each iteration: 1 increment, 1 decrement (arithmetic + assignment), 1 comparison
+				there are n / 2 iterations
+		Set tempValue to arr[lastIndex]
+			1 assignment
+		Set arr[lastIndex] to arr[z]
+			1 assignment
+		Set arr[z] to tempValue
+			1 assignment
+
+return arr.
+
+
+
+
+Assignments: 7n2 - 3n - 3
+Comparisons: 3n2 -2
+Arithmetic: 3n2 - 3n
+
+Total: 13n2 - 6n -5
+
+f(n) = 13n2 - 6n - 5
+
+algorithm is O(n2) in time complexity
+
+
+
+
+
+
+

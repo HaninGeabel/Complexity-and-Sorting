@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Comparator;
+
 /**
  * A util class for sorting a Comparable array using insertion sort algorithm.
  * 
@@ -20,7 +22,7 @@ public class InsertionSort {
 	 * @param arr A collection of Comparables
 	 * @return The same array that was sorted
 	 */
-	public static <T extends Comparable<? super T>> T[] insertionSort (T[] arr) {
+	public static <T extends Comparable<? super T>> void insertionSort (T[] arr) {
 		
 		// go through each element except the last element
 		for(int i = 0; i < arr.length - 1; i++) {
@@ -42,6 +44,31 @@ public class InsertionSort {
 			}
 			
 		}
-		return arr;
+	}
+	
+	
+	public static <T extends Comparable<? super T>> void insertionSort (T[] arr,  Comparator<? super T> c) {
+		
+		// go through each element except the last element
+		for(int i = 0; i < arr.length - 1; i++) {
+			// set up another loop to track moving the compared element to the left
+			for(int j = i; j >= 0; j--) {
+				// sorting greatest to least
+				// when arr[j] is less than arr[j + 1] -> negative number
+				if(c.compare(arr[j], arr[j + 1]) < 0) {
+					// if arr[j + 1] is greater than arr[j], then swap the elements
+					T tempValue;
+					tempValue = arr[j + 1];
+					arr[j + 1] = arr[j];
+					arr[j] = tempValue;
+				
+				} else {
+					// otherwise, don't need to keep moving left
+					break;
+				}
+			}
+			
+		}
 	}
 }
+

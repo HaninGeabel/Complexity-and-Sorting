@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Comparator;
+
 /**
  * A util class for sorting a Comparable array using pancake sort algorithm.
  * 
@@ -18,7 +20,7 @@ public class PancakeSort {
 	 * @param arr A collection of Comparables
 	 * @return The same array that was sorted
 	 */
-	public static <T extends Comparable<? super T>> T[] pancakeSort (T[] arr) {
+	public static <T extends Comparable<? super T>> void pancakeSort (T[] arr) {
 		
 		// go through each element starting from the last element, except the first element
 		for(int i = arr.length - 1; i > 0; i--) {
@@ -52,6 +54,48 @@ public class PancakeSort {
 				arr[n] = tempValue;
 			}
 		}
-		return arr;
-	}	
+	}
+	
+	
+	
+	/**
+	 * Runs pancake sort algorithm in-place on an array
+	 * @param arr A collection of Comparables
+	 * @return The same array that was sorted
+	 */
+	public static <T extends Comparable<? super T>> void pancakeSort (T[] arr, Comparator<? super T> c) {
+		
+		// go through each element starting from the last element, except the first element
+		for(int i = arr.length - 1; i > 0; i--) {
+			int minIndex = i;
+			for(int j = i - 1; j >= 0; j--) {
+				// check if there's a smaller value, so the result is always negative number
+				if(c.compare(arr[j], arr[minIndex]) < 0) {
+					// look for a min index for this algorithm
+					minIndex = j;
+				}
+			}
+			// check if i is the smallest value, then continue to the next index
+			if(i == minIndex) {
+				continue;
+			}
+				
+			// next step is flipping values from "index = 0" to "minIndex"
+			for(int k = 0; k < minIndex; k++, minIndex--) {
+				// swap each value
+				T tempValue;
+				tempValue = arr[minIndex];
+				arr[minIndex] = arr[k];
+				arr[k] = tempValue;
+			}
+			// last step is flipping values from "index = 0" to "i"
+			for(int n = 0, lastIndex = i; n < lastIndex; n++, lastIndex--) {
+				// swap each value
+				T tempValue;
+				tempValue = arr[lastIndex];
+				arr[lastIndex] = arr[n];
+				arr[n] = tempValue;
+			}
+		}
+	}
 }
