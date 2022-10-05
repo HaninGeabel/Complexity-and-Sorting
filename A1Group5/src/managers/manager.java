@@ -20,7 +20,7 @@ public class manager {
 	public  Shape [] shapes = new  Shape[100];
 	
 
-//pass the arges
+//pass the args
 public void readFromFile(String [] args) {
 	
 	for (int i = 0; i <args.length; i++) {
@@ -85,7 +85,7 @@ Scanner in = new Scanner(file);
 			OctagonalPrism    octagonalPrism   = new OctagonalPrism (firstP,secoundP);
 		}
 		else {
-			System.out.println("this is not valid object"); 
+			System.out.println("This is not a valid object."); 
 		}
 		
 		
