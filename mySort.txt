@@ -47,8 +47,6 @@ for i = n - 1 to 0
 		Set arr[z] to tempValue
 			1 assignment
 
-return arr.
-
 
 
 
