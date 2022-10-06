@@ -18,7 +18,6 @@ public class PancakeSort {
 	/**
 	 * Runs pancake sort algorithm in-place on an array
 	 * @param arr A collection of Comparables
-	 * @return The same array that was sorted
 	 */
 	public static <T extends Comparable<? super T>> void pancakeSort (T[] arr) {
 		
@@ -61,7 +60,7 @@ public class PancakeSort {
 	/**
 	 * Runs pancake sort algorithm in-place on an array
 	 * @param arr A collection of Comparables
-	 * @return The same array that was sorted
+	 * @param c A Comparator to sort with
 	 */
 	public static <T extends Comparable<? super T>> void pancakeSort (T[] arr, Comparator<? super T> c) {
 		

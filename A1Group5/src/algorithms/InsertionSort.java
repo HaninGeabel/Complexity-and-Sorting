@@ -20,7 +20,6 @@ public class InsertionSort {
 	/**
 	 * Runs insertion sort algorithm in-place on an array
 	 * @param arr A collection of Comparables
-	 * @return The same array that was sorted
 	 */
 	public static <T extends Comparable<? super T>> void insertionSort (T[] arr) {
 		
@@ -46,7 +45,11 @@ public class InsertionSort {
 		}
 	}
 	
-	
+	/**
+	 * Runs insertion sort algorithm in-place on an array
+	 * @param arr A collection of Comparables
+	 * @param c A Comparator to sort with
+	 */
 	public static <T extends Comparable<? super T>> void insertionSort (T[] arr,  Comparator<? super T> c) {
 		
 		// go through each element except the last element
