@@ -117,14 +117,14 @@ public class MergSort {
 	 * @param c
 	 */
 
-	public static <T extends Comparator<? super T>> void mergSort(T[] arr, int firstIndex, int lastIndex,
+	public static <T> void mergSort(T[] arr, int firstIndex, int lastIndex,
 			Comparator<? super T> c) {
 		// base case
 		if (firstIndex == lastIndex)
 			return;
 
 		if (firstIndex < lastIndex) {// check if the array has more than one element
-
+if (lastIndex - firstIndex <1) {
 			// find the middle point
 			int middle = (firstIndex + lastIndex) / 2;
 
@@ -135,8 +135,8 @@ public class MergSort {
 			merg(arr, firstIndex, middle, lastIndex, c);
 		}
 	}
-
-	static <T extends Comparator<? super T>> void merg(T[] arr, int firstIndex, int middle, int lastIndex,
+	}
+	static <T > void merg(T[] arr, int firstIndex, int middle, int lastIndex,
 			Comparator<? super T> c)
 
 	{

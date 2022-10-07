@@ -51,5 +51,10 @@ public class TriangularPrism extends Prism {
 		double area = 1/2 * edgeLength * edgeLength;
 		return area;
 	}
+	@Override
+	public String toString() {
+		return "TriangularPrism [edgeLength=" + edgeLength + ", height=" + height + ", calcVolume()=" + calcVolume()
+				+ ", calcBaseArea()=" + calcBaseArea() + "]";
+	}
 
 }

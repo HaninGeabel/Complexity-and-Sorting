@@ -50,12 +50,18 @@ public class SquarePrism extends Prism {
 
 	@Override
 	/**
-	 * @return returns the base area of the square prism calculated using the
-	 *         formula: s^2
+	 * @return returns the base area of the square prism calculated using the formula: 
+	 * s^2
 	 */
 	public double calcBaseArea() {
 		double area = edgeLength * edgeLength;
 		return area;
+	}
+
+	@Override
+	public String toString() {
+		return "SquarePrism [edgeLength=" + edgeLength + ", height=" + height + ", calcVolume()=" + calcVolume()
+				+ ", calcBaseArea()=" + calcBaseArea() + "]";
 	}
 
 }

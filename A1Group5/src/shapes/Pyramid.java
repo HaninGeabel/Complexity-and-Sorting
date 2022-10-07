@@ -1,19 +1,19 @@
 package shapes;
 
-public class Pyramid extends Shape {
-	// A pyramid always has 4 sides, so this is final
-	final public double sides = 4;
+public class Pyramid extends Shape{
+	//A pyramid always has 4 sides, so this is final
+final public double sides = 4;
 //The length of each edge of the shape
-	public double edgeLength;
+public double edgeLength; 
 
-	// No arg constructor for pyramid
+	//No arg constructor for pyramid
 	public Pyramid() {
-		super();
-	}
+	super();
+}
 
 	/**
 	 * 
-	 * @param height     the height of the pyramid
+	 * @param height the height of the pyramid
 	 * @param edgeLength the length of each edge of the base of the pyramid
 	 */
 	public Pyramid(double height, double edgeLength) {
@@ -37,9 +37,10 @@ public class Pyramid extends Shape {
 		this.edgeLength = edgeLength;
 	}
 
+
 	/**
-	 * @return returns the volume of the pyramid using the formula: 1/3 * s^2 *
-	 *         height
+	 * @return returns the volume of the pyramid using the formula:
+	 *  1/3 * s^2 * height
 	 */
 	@Override
 	public double calcVolume() {
@@ -48,12 +49,21 @@ public class Pyramid extends Shape {
 	}
 
 	/**
-	 * @return returns the base area of the pyramid using the formula: s * s
+	 * @return returns the base area of the pyramid using the formula:
+	 *  s * s
 	 */
 	@Override
 	public double calcBaseArea() {
 		double area = edgeLength * edgeLength;
 		return area;
 	}
+
+	@Override
+	public String toString() {
+		return "Pyramid [edgeLength=" + edgeLength + ", height=" + height + ", calcVolume()=" + calcVolume()
+				+ ", calcBaseArea()=" + calcBaseArea() + "]";
+	}
+
+	
 
 }

@@ -59,4 +59,10 @@ public class PentagonalPrism extends Prism {
 		return area;
 	}
 
+	@Override
+	public String toString() {
+		return "PentagonalPrism [edgeLength=" + edgeLength + ", height=" + height + ", calcVolume()=" + calcVolume()
+				+ ", calcBaseArea()=" + calcBaseArea() + "]";
+	}
+
 }
