@@ -85,17 +85,18 @@ public class Manager {
 
 		}
 	}
-	
+
 	/**
-	 * SortOutput should print the first sorted value the last sorted value,
-	 * and every thousandth values in between.
+	 * SortOutput should print the first sorted value the last sorted value, and
+	 * every thousandth values in between.
+	 * 
 	 * @param <T>
 	 * @param sortedArray the array to print out
 	 */
 	public <T extends Comparable<? super T>> void sortOutput(T[] sortedArray) {
-		for(int i = 0; i < sortedArray.length - 1; i += 1000) {
+		for (int i = 0; i < sortedArray.length - 1; i += 1000) {
 			System.out.println(sortedArray[i]);
-		} 
+		}
 		// print out the last value
 		System.out.println(sortedArray[sortedArray.length - 1]);
 	}

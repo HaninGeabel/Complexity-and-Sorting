@@ -1,9 +1,8 @@
 package shapes;
 
-public class Cylinder extends Shape{
-	
+public class Cylinder extends Shape {
+
 	private double radius;
-	
 
 //No arg constructor for cylinder shape
 	public Cylinder() {
@@ -50,10 +49,9 @@ public class Cylinder extends Shape{
 		this.radius = radius;
 	}
 
-
 	/**
-	 * @return returns the volume of the cylinder calculated using the formula:
-	 *  pi r^2 h
+	 * @return returns the volume of the cylinder calculated using the formula: pi
+	 *         r^2 h
 	 */
 	@Override
 	public double calcVolume() {
@@ -66,7 +64,7 @@ public class Cylinder extends Shape{
 	@Override
 	/**
 	 * @return returns the base area of the cylinder calculated using the formula:
-	 * pi * r^2 
+	 *         pi * r^2
 	 */
 	public double calcBaseArea() {
 		double area;
@@ -74,6 +72,3 @@ public class Cylinder extends Shape{
 		return area;
 	}
 }
-
-	
-
