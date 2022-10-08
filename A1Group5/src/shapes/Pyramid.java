@@ -44,8 +44,8 @@ public double edgeLength;
 	 */
 	@Override
 	public double calcVolume() {
-		// TODO Auto-generated method stub
-		return 0;
+		double volume = 1.0/3 * edgeLength* edgeLength * height;
+		return volume;
 	}
 
 	/**

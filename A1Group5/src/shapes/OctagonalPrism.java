@@ -2,7 +2,7 @@ package shapes;
 
 public class OctagonalPrism extends Prism{
 //An octagonal prims always has 8 sides
-private final double sides = 8; 
+//private final double sides = 8; 
 //Edge length will always be passed from the file to the constructor
 private double edgeLength;
 	//No arg constructor for octagonal prism

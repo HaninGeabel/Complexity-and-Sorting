@@ -2,7 +2,7 @@ package shapes;
 
 public class PentagonalPrism extends Prism {
 //Pentagon always has five sides so we use a constant
-	private final double sides = 5;
+//	private final double sides = 5;
 //Length of each edge of the shape
 	private double edgeLength;
 
@@ -55,7 +55,7 @@ public class PentagonalPrism extends Prism {
 	 *  5 * s^2 * tan(54) / 4
 	 */
 	public double calcBaseArea() {
-		double area = sides * (edgeLength * edgeLength) * Math.tan(54) / 4;
+		double area = 5 * (edgeLength * edgeLength) * Math.tan(54) / 4;
 		return area;
 	}
 

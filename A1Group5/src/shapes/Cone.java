@@ -41,7 +41,7 @@ public void setRadius(double radius) {
  *  1/3 pi r^2 h
  */
 public double calcVolume() {
-	double volume = height * (1/3) * this.calcBaseArea();
+	double volume = height * (1.0/3) * this.calcBaseArea();
 	return volume;
 }
 

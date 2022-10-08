@@ -1,7 +1,7 @@
 package shapes;
 
 public class TriangularPrism extends Prism {
-	final private double sides = 3;
+//	final private double sides = 3;
 	//Length of the edges of the triangular prism
 	private double edgeLength; 
 	
@@ -48,7 +48,7 @@ public class TriangularPrism extends Prism {
 	 * s^2 * (square root of 3) / 4
 	 */
 	public double calcBaseArea() {
-		double area = 1/2 * edgeLength * edgeLength;
+		double area = 1.0/2 * edgeLength * edgeLength;
 		return area;
 	}
 	@Override

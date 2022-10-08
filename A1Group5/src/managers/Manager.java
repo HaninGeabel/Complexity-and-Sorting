@@ -22,6 +22,7 @@ import algorithms.BubbleSort;
 import algorithms.InsertionSort;
 import algorithms.MergSort;
 import algorithms.PancakeSort;
+import algorithms.QuickSort;
 import algorithms.SelectionSort;
 
 
@@ -228,39 +229,44 @@ public void sortArr(Shape[] arr, String sortType, String compareType) {
 //height pass the array
 	// volume and array pass array and object
 	int lastIndex =  arr.length-1;
+	long start = 0;
+	long stop = 0;
 	
 	if(compareType.equalsIgnoreCase("h")) {
 	
 	
 		if(sortType.equalsIgnoreCase("b")) {
 			System.out.println(sortType);
+
+			start = System.currentTimeMillis();
 			BubbleSort.bubbleSort(arr);
-//			for(int i= 0 ; i <=10 ; i++ )
-//			System.out.println(arr[i]);
+			stop = System.currentTimeMillis();
+
+
 			
 		}
 		
 		else if(sortType.equalsIgnoreCase("s")) {
+			start = System.currentTimeMillis();
 			SelectionSort.SelectionSort(arr);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("i")) {
-//			System.out.println(sortType);
+			start = System.currentTimeMillis();
 			InsertionSort.insertionSort(arr);
-//			System.out.println(sortType);
-//			for(int i= 0 ; i <=1000; i++ ) {
-//				System.out.println(arr[i]);
-//			}
+			stop = System.currentTimeMillis();
 				
 		}
 		else if(sortType.equalsIgnoreCase("m")) {
-			
+			start = System.currentTimeMillis();
 			MergSort.mergSort(arr, 0, lastIndex);
+			stop = System.currentTimeMillis();
 			}
-//		else if(sortType.equalsIgnoreCase("q")) {
-//			
-//		}
+
 		else if(sortType.equalsIgnoreCase("z")) {
+			start = System.currentTimeMillis();
 			PancakeSort.pancakeSort(arr);
+			stop = System.currentTimeMillis();
 		}
 		else {
 			System.out.println("Invalid compare type1");
@@ -270,24 +276,37 @@ public void sortArr(Shape[] arr, String sortType, String compareType) {
 		
 		
 		if(sortType.equalsIgnoreCase("b")) {
+			start = System.currentTimeMillis();
 			BubbleSort.bubbleSort(arr, v);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("s")) {
+			start = System.currentTimeMillis();
 			SelectionSort.SelectionSort(arr, v);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("i")) {
+			start = System.currentTimeMillis();
 			InsertionSort.insertionSort(arr, v);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("m")) {
-//			int lastIndex =  arr.length-1;
+		
 			int firstIndex = 0; 
+			start = System.currentTimeMillis();
 				MergSort.mergSort(arr, firstIndex, lastIndex,v);
+				stop = System.currentTimeMillis();
 			}
 		else if(sortType.equalsIgnoreCase("q")) {
-			
+			start = System.currentTimeMillis();
+			QuickSort.quicksort(arr, v);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("z")) {
+			start = System.currentTimeMillis();
 			PancakeSort.pancakeSort(arr, v);
+			stop = System.currentTimeMillis();
+
 		}
 		else {
 			System.out.println("Invalid compare type2");
@@ -297,24 +316,40 @@ public void sortArr(Shape[] arr, String sortType, String compareType) {
 		
 		
 		if(sortType.equalsIgnoreCase("b")) {
+			start = System.currentTimeMillis();
+
 			BubbleSort.bubbleSort(arr, a);
+			stop = System.currentTimeMillis();
+
 		}
 		else if(sortType.equalsIgnoreCase("s")) {
+			start = System.currentTimeMillis();
+
 			SelectionSort.SelectionSort(arr, a);
+			stop = System.currentTimeMillis();
+
 		}
 		else if(sortType.equalsIgnoreCase("i")) {
-			//InsertionSort.insertionSort(arr, a);
+			start = System.currentTimeMillis();
+
+			InsertionSort.insertionSort(arr, a);
+			stop = System.currentTimeMillis();
+
 		}
 		else if(sortType.equalsIgnoreCase("m")) {
-//			int lastIndex =  arr.length-1; 
+			start = System.currentTimeMillis();
+
 			MergSort.mergSort(arr, 0, lastIndex, a);
-			
+			stop = System.currentTimeMillis();
+
 			}
 		else if(sortType.equalsIgnoreCase("q")) {
-			
+			start = System.currentTimeMillis();
+			QuickSort.quicksort(arr, a);
+			stop = System.currentTimeMillis();
 		}
 		else if(sortType.equalsIgnoreCase("z")) {
-			//PancakeSort.pancakeSort(arr, a);
+			PancakeSort.pancakeSort(arr, a);
 		}
 		else {
 			System.out.println("Invalid compare type3");
@@ -323,8 +358,11 @@ public void sortArr(Shape[] arr, String sortType, String compareType) {
 	else {
 		System.out.println("Invalid compare type4");
 	}
-	for(int i= 0 ; i <=10 ; i++ )
+	for(int i= 0 ; i <=1000 ; i++ ) {
 		System.out.println(arr[i]);
+	}
+	System.out.println("Time complexity of: " + (stop-start));
+
 	
 }
 }

@@ -27,9 +27,12 @@ public static <T extends Comparable<? super T>> void  bubbleSort(T[] array) {//
 	// base case
 	if (x == 0 ) return ; 
 	
+	long start, stop;
+
 	
-	
-	
+	start = System.currentTimeMillis();
+
+
 	//the outer loop for the number of iterations 
 	for (int i = 0; i < x-1; i++) {
 		// inner loop for compare each adjacent items
@@ -47,6 +50,8 @@ public static <T extends Comparable<? super T>> void  bubbleSort(T[] array) {//
 	
 		}
 	}
+	stop = System.currentTimeMillis();
+	System.out.println("Time complexity of: " + (stop-start));
 
 	}
 /**
@@ -60,7 +65,10 @@ public static <T extends Comparable<? super T>> void  bubbleSort(T[] array) {//
 	public static <T> void  bubbleSort(T[] array, Comparator<? super T> c) {//
 		// get the length of the passed array 
 			int x = array.length;
+			long start, stop;
+
 			
+			start = System.currentTimeMillis();
 			//the outer loop for the number of iterations 
 			for (int i = 0; i < x-1; i++) {
 				// inner loop for compare each adjacent items
@@ -80,7 +88,10 @@ public static <T extends Comparable<? super T>> void  bubbleSort(T[] array) {//
 					
 				}
 			}
+			stop = System.currentTimeMillis();
+			System.out.println("Time complexity of: " + (stop-start));
 
 			}
+
 }
 
